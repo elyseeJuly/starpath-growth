@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# StarPath Starter - macOS Application Launcher
+
+# Get the directory where this app is located
+APP_PATH=$(readlink -f "$0")
+APP_DIR=$(dirname "$APP_PATH")
+CONTENTS_DIR=$(dirname "$APP_DIR")
+APP_BUNDLE_DIR=$(dirname "$CONTENTS_DIR")
+PROJECT_DIR=$(dirname "$APP_BUNDLE_DIR")
+
+# Change to project directory
+cd "$PROJECT_DIR"
+
+# Run the start script
+./start_starpath.sh
